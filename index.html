@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Locktober</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Locktober</h1>
+        <p>Snap a hat to your head with style ✨</p>
+      </div>
+      <button class="btn main-btn">Locktober</button>
+    </header>
+
+    <main>
+      <div class="canvas-wrapper" id="dropZone">
+        <canvas id="canvas"></canvas>
+        <div class="overlay">Drop image • Drag hat</div>
+        <input id="fileUpload" type="file" accept="image/*" hidden>
+      </div>
+      <div class="controls">
+        <label for="fileUpload" class="upload-label">Upload image</label>
+        <button id="saveBtn" class="btn green-btn">Save Image</button>
+      </div>
+
+      <aside>
+        <div class="panel">
+          <h3>Hat controls</h3>
+          <label>Scale
+            <input id="scaleControl" type="range" min="0.2" max="2" step="0.01" value="1">
+          </label>
+          <label>Rotation
+            <input id="rotationControl" type="range" min="-180" max="180" step="1" value="0">
+          </label>
+          <button id="resetBtn" class="btn gray-btn">Reset</button>
+        </div>
+
+        <div class="panel tips">
+          <h4>Tips</h4>
+          <ul>
+            <li>Hat snaps automatically to detected faces.</li>
+            <li>Drag the hat to fine-tune.</li>
+            <li>Hover buttons for smooth shadows + animations.</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      Made with ❤️ — Locktober
+    </footer>
+  </div>
+</body>
+</html>
